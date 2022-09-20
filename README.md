@@ -1,25 +1,18 @@
-# Old Reddit Redirect
+# Old Genius Redirect
 
-[Chrome extension](https://chrome.google.com/webstore/detail/old-reddit-redirect/dneaehbmnbhcippjikoajpoabadpodje)
+Dislike Genius' redesign? Old Genius Redirect will ensure that you always load the old design instead.
 
-[Firefox extension](https://addons.mozilla.org/firefox/addon/old-reddit-redirect)
+## Usage
 
-Dislike Reddit's redesign? Old Reddit Redirect will ensure that you always load the old (old.reddit.com) design instead.
-
-Will force all reddit.com usage to old.reddit.com. Will work when navigating to the site, opening links, using old bookmarks. Works regardless of whether you are logged in or not, and in incognito mode.
+Will force Genius.com song lyric pages to load with the old page design.
+Note: You must be logged in to a Genius account for this to work.
 
 #### Redirected domains
 
-- `reddit.com`
-- `www.reddit.com`
-- `np.reddit.com`
-- `amp.reddit.com`
-- `i.reddit.com`
-
-#### Whitelisted domains
-
-- `new.reddit.com`
+- `genius.com`
+- `www.genius.com`
 
 ## License
 
-Code copyright Tom Watson. Code released under [the MIT license](LICENSE.txt).
+Forked from [Old Reddit Redirect](https://github.com/tom-james-watson/old-reddit-redirect)
+Code released under [the MIT license](LICENSE.txt).
