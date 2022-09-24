@@ -1,5 +1,7 @@
 # Old Genius Redirect
 
+[Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/old-genius-redirect/)
+
 Dislike Genius' redesign? Old Genius Redirect will ensure that you always load the old design instead.
 
 Will force Genius.com song lyric pages to load with the old page design.  
