@@ -1,7 +1,7 @@
 # Old Genius Redirect
 
 [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/old-genius-redirect/)  
-[Chrome extension](https://github.com/lozog/old-genius-redirect/releases/tag/1.0.1)
+[Chrome extension](https://github.com/lozog/old-genius-redirect/releases/latest) 
 
 Dislike Genius' redesign? Old Genius Redirect will ensure that you always load the old design instead.
 
