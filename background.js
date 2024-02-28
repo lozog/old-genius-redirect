@@ -8,7 +8,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 
     if (searchParams.getAll("bagon").includes("1")) return;
 
-    if (!url.pathname.includes("lyrics")) return;
+    if (!url.pathname.includes("lyrics") || !url.pathname.includes("annotated")) return;
 
     return { redirectUrl: url.protocol + url.hostname + url.pathname + oldGeniusPageQueryParam };
   },
