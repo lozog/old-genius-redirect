@@ -1,25 +1,28 @@
 const oldGeniusPageQueryParam = "?bagon=1";
 
-chrome.webRequest.onBeforeRequest.addListener(
-  function (details) {
-    const url = new URL(details.url);
-
-    const searchParams = url.searchParams;
-
-    if (searchParams.getAll("bagon").includes("1")) return;
-
-    if (!(url.pathname.includes("lyrics") || url.pathname.includes("annotated"))) return;
-
-    return { redirectUrl: url.protocol + url.hostname + url.pathname + oldGeniusPageQueryParam };
-  },
-  {
-    urls: [
-      "*://genius.com/*",
-      "*://www.genius.com/*",
-    ],
-    types: [
-      "main_frame"
-    ],
-  },
-  ["blocking"]
-);
+chrome.runtime.onInstalled.addListener(function () {
+  chrome.declarativeNetRequest.updateDynamicRules({
+    removeRuleIds: [1],
+    addRules: [{
+      id: 1,
+      priority: 1,
+      action: {
+        type: 'redirect',
+        redirect: {
+          transform: {
+            queryTransform: {
+              addOrReplaceParams: [{
+                key: "bagon",
+                value: "1"
+              }]
+            }
+          }
+        },
+      },
+      condition: {
+        regexFilter: 'genius\.com\/[a-zA-Z0-9-]+-(lyrics|annotated)',
+        resourceTypes: ['main_frame']
+      },
+    }],
+  });
+});

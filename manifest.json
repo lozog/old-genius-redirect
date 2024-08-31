@@ -1,16 +1,17 @@
 {
   "name": "Old Genius Redirect",
   "description": "Ensure Genius always loads the old design",
-  "version": "1.0.2",
-  "manifest_version": 2,
-  "background": { "scripts": ["background.js"] },
+  "version": "2.0.0",
+  "manifest_version": 3,
+  "background": { "service_worker": "background.js" },
   "icons": {
     "48": "img/icon-48.png",
     "128": "img/icon-128.png"
   },
   "permissions": [
-    "webRequest",
-    "webRequestBlocking",
+    "declarativeNetRequest"    
+  ],
+  "host_permissions": [
     "*://genius.com/*",
     "*://www.genius.com/*"
   ]
